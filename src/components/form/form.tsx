@@ -3,6 +3,7 @@ import styles from "./form.module.scss";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { instance } from "../../api/config";
 
 type FormData = {
   name: string;
@@ -35,7 +36,21 @@ export const Form: FC = () => {
     },
   });
 
-  const onSubmit = (data: FormData) => console.log(data);
+  const onSubmit = async (data: FormData) => {
+    await instance
+      .post("/requests", {
+        name: data.name,
+        status: data.attendance,
+        guest: data.guest,
+        transport: data.transport,
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <section className={styles.container}>
