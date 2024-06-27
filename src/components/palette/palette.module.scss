@@ -1,0 +1,55 @@
+.container {
+  height: 100vh;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 92px;
+  text-align: center;
+
+  p {
+    font-family: "Montserrat";
+    font-size: 50px;
+    font-weight: 275;
+    color: rgb(142, 135, 126);
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 35px;
+
+    li {
+      width: 140px;
+      height: 138px;
+      border-radius: 45px;
+
+      &:first-child {
+        background-color: #9f7a68;
+      }
+
+      &:nth-child(2) {
+        background-color: #b6937f;
+      }
+
+      &:nth-child(3) {
+        background-color: #ceaa9a;
+      }
+
+      &:nth-child(4) {
+        background-color: #dabcb1;
+      }
+
+      &:nth-child(5) {
+        background-color: #ebcdc3;
+      }
+
+      &:last-child {
+        background-color: #e8dbd3;
+      }
+    }
+  }
+}

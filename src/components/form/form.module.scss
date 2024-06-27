@@ -1,0 +1,153 @@
+.container {
+  //   height: 100vh;
+  padding-top: 75px;
+  padding-bottom: 75px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 25px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+
+    h2 {
+      font-family: "Mira-Aurolic";
+      font-size: 100px;
+      font-weight: 400;
+      color: #8e877e;
+    }
+
+    p {
+      max-width: 310px;
+
+      font-family: "Montserrat";
+      font-size: 30px;
+      font-weight: 275;
+
+      text-align: center;
+
+      color: #8e877e;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 45px;
+
+    .inputHolder {
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+
+      p {
+        max-width: 606px;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2px;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+
+        font-family: "Montserrat";
+        font-size: 30px;
+        font-weight: 275;
+        color: #8e877e;
+      }
+
+      .textInput {
+        width: 348px;
+        padding: 5px;
+        border-bottom: 1px solid #8e877e;
+        border-radius: 10px;
+
+        font-family: "Montserrat";
+        font-size: 20px;
+        font-weight: 275;
+        color: #8e877e;
+      }
+
+      span {
+        font-family: "Montserrat";
+        font-size: 12px;
+        font-weight: 275;
+
+        color: #d15a47;
+      }
+    }
+
+    input[type="radio"] {
+      position: relative;
+      display: inline-block;
+
+      width: 20px;
+      height: 20px;
+
+      border-radius: 100%;
+      outline: none !important;
+      -webkit-appearance: none;
+
+      // Radio
+      // -----
+
+      &::before {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        display: block;
+        content: "";
+
+        background: transparent;
+        border: 1px solid #8e877e;
+        border-radius: 100%;
+
+        width: 20px;
+        height: 20px;
+      }
+
+      &:checked::after {
+        position: relative;
+        top: -50%;
+        right: -50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: #8e877e;
+      }
+    }
+
+    button {
+      width: 250px;
+      padding: 10px;
+
+      display: flex;
+      align-self: center;
+      align-items: center;
+      justify-content: center;
+
+      background-color: #8e877e;
+
+      border-radius: 10px;
+
+      font-family: "Montserrat";
+      font-size: 30px;
+      font-weight: 275;
+      color: #ffffff;
+    }
+  }
+}

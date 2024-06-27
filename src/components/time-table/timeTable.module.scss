@@ -1,0 +1,53 @@
+.container {
+  height: 100vh;
+  padding-bottom: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 26px;
+
+  h2 {
+    font-family: "Mira-Aurolic";
+    font-size: 100px;
+    font-weight: 400;
+    color: #8e877e;
+  }
+
+  .timeTable {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    div {
+      display: flex;
+      align-items: center;
+      column-gap: 35px;
+
+      font-family: "Montserrat";
+      font-size: 50px;
+      font-weight: 275;
+      color: #8e877e;
+
+      .imgHolder {
+        position: relative;
+        width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 1px;
+          top: 50%;
+          left: 0px;
+          transform: translateY(-50%);
+          background-color: #8e877e;
+        }
+      }
+    }
+  }
+}

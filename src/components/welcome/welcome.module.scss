@@ -1,0 +1,32 @@
+.container {
+  height: 100vh;
+  padding-top: 75px;
+  padding-bottom: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 47px;
+
+  text-align: center;
+
+  h2 {
+    font-family: "Mira-Aurolic";
+    font-size: 160px;
+    font-weight: 400;
+    color: #8e877e;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    img {
+      width: 357px;
+      height: 357px;
+      object-fit: cover;
+    }
+  }
+}

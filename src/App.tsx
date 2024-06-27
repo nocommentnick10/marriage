@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Header } from "./components/header/header";
+import styles from "./app.module.scss";
+import { Hero } from "./components/hero/hero";
+import { Invite } from "./components/invite/invite";
+import { LocationMap } from "./components/location/location";
+import { YMaps } from "@pbe/react-yandex-maps";
+import { TimeTable } from "./components/time-table/time-table";
+import { Palette } from "./components/palette/palette";
+import { Form } from "./components/form/form";
+import { Welcome } from "./components/welcome/welcome";
+import { Footer } from "./components/footer/footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <YMaps>
+      <div className={styles.app}>
+        <div className={styles.container}>
+          <Header />
+          <Hero />
+          <Invite />
+        </div>
+        <LocationMap />
+        <div className={styles.container}>
+          <TimeTable />
+          <Palette />
+          <Form />
+          <Welcome />
+          <Footer />
+        </div>
+      </div>
+    </YMaps>
   );
 }
 

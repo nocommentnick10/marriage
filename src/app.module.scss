@@ -1,0 +1,21 @@
+@import "./styles/variables.scss";
+
+.app {
+  // height: 100vh;
+  background: #cccccc;
+  background-image: url("./assets/img/bg.png");
+  background-position: left bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  color: $text;
+}
+
+.container {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
