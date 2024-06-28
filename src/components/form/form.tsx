@@ -23,6 +23,8 @@ const schema = yup
 
 export const Form: FC = () => {
   const [ showForm, setShowForm ] = useState<boolean>(false);
+
+  const [ backendError, setBackendError ] = useState<string>();
   
   const {
     register,
@@ -48,11 +50,13 @@ export const Form: FC = () => {
       })
       .then((response) => {
         console.log(response);
+        setShowForm(true);
       })
       .catch((error) => {
         console.log(error);
+        const message = String(error);
+        setBackendError(message);
       });
-    setShowForm(true);
   };
 
   return (
@@ -144,6 +148,7 @@ export const Form: FC = () => {
             </label>
           </div>
           <span>{errors.attendance?.message}</span>
+          <span>{backendError && backendError}</span>
         </div>
 
         <button type="submit">Отправить</button>

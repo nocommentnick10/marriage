@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const instance = axios.create({
-  baseURL: "https://glitch.com/~nettle-pond-red/",
+  baseURL: "https://nettle-pond-red.glitch.me/",
 });
