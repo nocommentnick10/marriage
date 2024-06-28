@@ -30,3 +30,20 @@
     }
   }
 }
+
+@media (max-width: 750px) {
+  .container {
+    height: unset;
+    padding-top: 25px;
+    row-gap: 25px;
+
+    h2 {
+      font-size: 45px;
+    }
+
+    div {
+      flex-direction: column;
+      row-gap: 25px;
+    }
+  }
+}

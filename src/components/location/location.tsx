@@ -18,8 +18,8 @@ export const LocationMap: FC = () => {
         <div className={styles.col}>
           <div className={styles.mapHolder}>
             <Map
-              width={445}
-              height={347}
+              width={355}
+              height={355}
               defaultState={{ center: [54.889998, 73.347452], zoom: 17 }}
             >
               <Placemark geometry={[54.889998, 73.347452]} />

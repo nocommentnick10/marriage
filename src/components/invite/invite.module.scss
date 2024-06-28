@@ -36,3 +36,26 @@
     color: rgb(142, 135, 126);
   }
 }
+
+@media (max-width: 750px) {
+  .invite {
+    height: unset;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    row-gap: 15px;
+
+    h2 {
+      max-width: unset;
+      font-size: 40px;
+    }
+
+    span {
+      max-width: unset;
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+}

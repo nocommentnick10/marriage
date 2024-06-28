@@ -53,3 +53,27 @@
     }
   }
 }
+
+@media (max-width: 750px) {
+  .container {
+    height: unset;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    row-gap: 50px;
+
+    p {
+      font-size: 25px;
+    }
+
+    ul {
+      flex-wrap: wrap;
+      row-gap: 25px;
+
+      li {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+      }
+    }
+  }
+}

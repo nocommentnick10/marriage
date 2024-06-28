@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import styles from "./form.module.scss";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -22,6 +22,8 @@ const schema = yup
   .required();
 
 export const Form: FC = () => {
+  const [ showForm, setShowForm ] = useState<boolean>(false);
+  
   const {
     register,
     handleSubmit,
@@ -50,6 +52,7 @@ export const Form: FC = () => {
       .catch((error) => {
         console.log(error);
       });
+    setShowForm(true);
   };
 
   return (
@@ -58,7 +61,10 @@ export const Form: FC = () => {
         <h2>анкета</h2>
         <p>Просьба заполнить до 10.07.24</p>
       </div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <div>
+        <span style={ { display: !showForm ? "none" : "flex"} }>Спасибо, мы вас ждем!</span>
+      </div>
+      <form onSubmit={handleSubmit(onSubmit)} style={ { display: showForm ? "none" : "flex"} }>
         <div className={styles.inputHolder}>
           <p>ФИО</p>
           <input
@@ -71,7 +77,7 @@ export const Form: FC = () => {
         </div>
 
         <div className={styles.inputHolder}>
-          <p>ВАШЕ ПРИСУТСВИЕ</p>
+          <p>ПОДТВЕРДИТЕ ВАШЕ ПРИСУТСВИЕ</p>
           <div>
             <label>
               <input

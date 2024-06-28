@@ -51,3 +51,27 @@
     }
   }
 }
+
+@media (max-width: 750px) {
+  .container {
+    height: unset;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    .timeTable {
+      row-gap: 50px;
+      div {
+        flex-direction: column;
+        row-gap: 15px;
+
+        font-size: 25px;
+
+        img {
+          width: 50px;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,4 @@
 .container {
-  //   height: 100vh;
   padding-top: 75px;
   padding-bottom: 75px;
 
@@ -29,6 +28,16 @@
       font-family: "Montserrat";
       font-size: 30px;
       font-weight: 275;
+
+      text-align: center;
+
+      color: #8e877e;
+    }
+
+    span {
+      font-family: "Montserrat";
+      font-size: 30px;
+      font-weight: 500;
 
       text-align: center;
 
@@ -148,6 +157,63 @@
       font-size: 30px;
       font-weight: 275;
       color: #ffffff;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 1; height: auto; }
+  100% { opacity: 0; height: 0px; display: none; }
+}
+
+@media (max-width: 750px) {
+  .container {
+    padding-bottom: 25px;
+    row-gap: 25px;
+
+    div {
+      row-gap: 10px;
+
+      h2 {
+        font-size: 45px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+
+    form {
+      row-gap: 25px;
+  
+      .inputHolder {
+        row-gap: 10px;
+  
+        label {
+          column-gap: 5px;
+
+          font-size: 20px
+        }
+  
+        .textInput {
+          font-size: 20px;
+        }
+      }
+
+      input[type="radio"] {
+        width: 15px;
+        height: 15px;
+  
+        &::before {
+          width: 15px;
+          height: 15px;
+        }
+      }
+
+      button {
+        width: 150px;
+        font-size: 15px;
+      }
     }
   }
 }
