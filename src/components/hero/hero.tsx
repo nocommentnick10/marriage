@@ -41,7 +41,7 @@ export const Hero: FC = () => {
           <p>Анастасия</p>
         </div>
         <Countdown
-          date={new Date().setFullYear(2024, 8, 23)}
+          date={new Date().setFullYear(2024, 7, 23)}
           renderer={Timer}
         />
       </div>
