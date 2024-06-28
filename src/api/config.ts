@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const instance = axios.create({
-  baseURL: "https://marriage-server.vercel.app/",
+  baseURL: "https://glitch.com/~nettle-pond-red/",
 });
