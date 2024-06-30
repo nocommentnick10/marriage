@@ -25,9 +25,7 @@ export const TimeTable: FC = () => {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ ease: "easeOut", duration: 0.7 }}
         >
-          <h2 className={styles.invite}>
-            <span>15:00</span>
-          </h2>
+          <span>15:00</span>
           <div className={styles.imgHolder}>
             <img src={Map} alt="Фуршет" />
           </div>
