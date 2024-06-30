@@ -9,26 +9,29 @@ import { Palette } from "./components/palette/palette";
 import { Form } from "./components/form/form";
 import { Welcome } from "./components/welcome/welcome";
 import { Footer } from "./components/footer/footer";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <YMaps>
-      <div className={styles.app}>
-        <div className={styles.container}>
-          <Header />
-          <Hero />
-          <Invite />
+    <BrowserRouter>
+      <YMaps>
+        <div className={styles.app}>
+          <div className={styles.container}>
+            <Header />
+            <Hero />
+            <Invite />
+          </div>
+          <LocationMap />
+          <div className={styles.container}>
+            <TimeTable />
+            <Palette />
+            <Form />
+            <Welcome />
+            <Footer />
+          </div>
         </div>
-        <LocationMap />
-        <div className={styles.container}>
-          <TimeTable />
-          <Palette />
-          <Form />
-          <Welcome />
-          <Footer />
-        </div>
-      </div>
-    </YMaps>
+      </YMaps>
+    </BrowserRouter>
   );
 }
 

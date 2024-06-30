@@ -65,6 +65,10 @@
         font-size: 30px;
       }
     }
+
+    .slider {
+      display: none;
+    }
   }
 }
 
@@ -90,8 +94,7 @@
       row-gap: 25px;
 
       img {
-        width: 355px;
-        height: 355px;
+        display: none;
       }
 
       .bottomCol {
@@ -101,6 +104,22 @@
 
         p {
           font-size: 25px;
+        }
+      }
+
+      .slider {
+        display: block;
+
+        img {
+          display: inline-block;
+
+          width: 375px;
+          height: 355px;
+
+          padding-left: 10px;
+          padding-right: 10px;
+
+          box-shadow: unset;
         }
       }
     }

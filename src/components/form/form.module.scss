@@ -140,6 +140,46 @@
       }
     }
 
+    input[type="checkbox"] {
+      position: relative;
+      display: inline-block;
+
+      width: 20px;
+      height: 20px;
+
+      outline: none !important;
+      -webkit-appearance: none;
+
+      // Radio
+      // -----
+
+      &::before {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        display: block;
+        content: "";
+
+        background: transparent;
+        border: 1px solid #8e877e;
+
+        width: 20px;
+        height: 20px;
+      }
+
+      &:checked::after {
+        position: relative;
+        top: -50%;
+        right: -50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: #8e877e;
+      }
+    }
+
     button {
       width: 250px;
       padding: 10px;
@@ -162,8 +202,15 @@
 }
 
 @keyframes fadeIn {
-  0% { opacity: 1; height: auto; }
-  100% { opacity: 0; height: 0px; display: none; }
+  0% {
+    opacity: 1;
+    height: auto;
+  }
+  100% {
+    opacity: 0;
+    height: 0px;
+    display: none;
+  }
 }
 
 @media (max-width: 750px) {
@@ -185,16 +232,16 @@
 
     form {
       row-gap: 25px;
-  
+
       .inputHolder {
         row-gap: 10px;
-  
+
         label {
           column-gap: 5px;
 
-          font-size: 20px
+          font-size: 20px;
         }
-  
+
         .textInput {
           font-size: 20px;
         }
@@ -203,7 +250,17 @@
       input[type="radio"] {
         width: 15px;
         height: 15px;
-  
+
+        &::before {
+          width: 15px;
+          height: 15px;
+        }
+      }
+
+      input[type="radio"] {
+        width: 15px;
+        height: 15px;
+
         &::before {
           width: 15px;
           height: 15px;
