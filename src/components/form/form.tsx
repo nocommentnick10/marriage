@@ -72,23 +72,23 @@ export const Form: FC = () => {
   const [scope, animate] = useAnimate();
 
   const onSubmit = async (data: FormData) => {
-    // await instance
-    //   .post("/requests", {
-    //     name: data.name,
-    //     status: data.attendance,
-    //     guest: data.guest,
-    //     transport: data.transport,
-    //   })
-    //   .then((response) => {
-    //     console.log(response);
-    //     animate("form", { height: 0 });
-    //     setShowForm(true);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //     const message = String(error);
-    //     setBackendError(message);
-    //   });
+    await instance
+      .post("/requests", {
+        name: data.name,
+        status: data.attendance,
+        guest: data.guest,
+        transport: data.transport,
+      })
+      .then((response) => {
+        console.log(response);
+        animate("form", { height: 0 });
+        setShowForm(true);
+      })
+      .catch((error) => {
+        console.log(error);
+        const message = String(error);
+        setBackendError(message);
+      });
     animate("form", { height: 0, opacity: 0 });
     setShowForm(true);
     console.log(data.drink);
