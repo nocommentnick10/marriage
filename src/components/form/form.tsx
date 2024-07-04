@@ -77,7 +77,7 @@ export const Form: FC = () => {
         name: data.name,
         status: data.attendance,
         guest: data.guest,
-        drinks: data.drink,
+        drinks: JSON.stringify(data.drink),
         transport: data.transport,
       })
       .then((response) => {
