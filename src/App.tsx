@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { Header } from "./components/header/header";
 import styles from "./app.module.scss";
 import { Hero } from "./components/hero/hero";
@@ -9,11 +10,11 @@ import { Palette } from "./components/palette/palette";
 import { Form } from "./components/form/form";
 import { Welcome } from "./components/welcome/welcome";
 import { Footer } from "./components/footer/footer";
-import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <YMaps>
+      <Analytics />
       <div className={styles.app}>
         <div className={styles.container}>
           <Header />
