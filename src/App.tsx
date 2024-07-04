@@ -13,25 +13,23 @@ import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <YMaps>
-        <div className={styles.app}>
-          <div className={styles.container}>
-            <Header />
-            <Hero />
-            <Invite />
-          </div>
-          <LocationMap />
-          <div className={styles.container}>
-            <TimeTable />
-            <Palette />
-            <Form />
-            <Welcome />
-            <Footer />
-          </div>
+    <YMaps>
+      <div className={styles.app}>
+        <div className={styles.container}>
+          <Header />
+          <Hero />
+          <Invite />
         </div>
-      </YMaps>
-    </BrowserRouter>
+        <LocationMap />
+        <div className={styles.container}>
+          <TimeTable />
+          <Palette />
+          <Form />
+          <Welcome />
+          <Footer />
+        </div>
+      </div>
+    </YMaps>
   );
 }
 
