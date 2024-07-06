@@ -42,7 +42,7 @@ export const Panel: FC = () => {
     });
 
     array.forEach((item) => {
-      if (item.status === "на трансфере")
+      if (item.transport === "на трансфере")
         setNeedTransportAmount((count) => count + 1);
     });
 
