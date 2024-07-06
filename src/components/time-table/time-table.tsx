@@ -65,7 +65,7 @@ export const TimeTable: FC = () => {
           <div className={styles.imgHolder}>
             <img src={Cake} alt="Окончание банкета" />
           </div>
-          <p>сбор гостей, фуршет</p>
+          <p>окончание банкета</p>
         </motion.div>
       </div>
     </section>
